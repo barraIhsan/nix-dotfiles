@@ -43,6 +43,7 @@
                 extraSpecialArgs = {
                   inherit inputs;
                 };
+                sharedModules = [ inputs.nixcord.homeModules.nixcord ];
                 users.barra = import ./home/barra.nix;
               };
             }
