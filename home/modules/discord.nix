@@ -223,9 +223,13 @@
         youtubeAdblock.enable = true;
 
         # equicord
+        timezones = {
+          enable = true;
+          askedTimezone = true;
+          showOwnTimezone = false;
+        };
         equicordToolbox.enable = true;
         selfForward.enable = true;
-        timezones.enable = true;
         voiceStats.enable = true;
       };
     };
