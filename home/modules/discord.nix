@@ -100,6 +100,28 @@
           enable = true;
           notificationVolume = 50.0;
         };
+        PinDMs = {
+          enable = true;
+          pinOrder = 1;
+          # https://github.com/FlameFlag/nixcord/issues/205
+          # actually define pinned dm channel ids until the issue is resolved
+          userBasedCategoryList = {
+            "462942476542672897" = [
+              {
+                "id" = "dlbj354xeps";
+                "name" = "<3";
+                "color" = 15277667;
+                "collapsed" = false;
+                "channels" = [
+                  "1460617378911092811"
+                  "1387789405518958695"
+                  "1460909633899073683"
+                  "1426180226630680641"
+                ];
+              }
+            ];
+          };
+        };
         platformIndicators = {
           enable = true;
           messages = false;
@@ -173,7 +195,6 @@
         permissionFreeWill.enable = true;
         permissionsViewer.enable = true;
         pictureInPicture.enable = true;
-        PinDMs.enable = true;
         reactErrorDecoder.enable = true;
         replyTimestamp.enable = true;
         revealAllSpoilers.enable = true;
