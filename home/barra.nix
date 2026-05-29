@@ -3,6 +3,7 @@
   imports = [
     ./modules/discord.nix
     ./modules/ghostty.nix
+    ./modules/cli.nix
   ];
 
   home.username = "barra";
