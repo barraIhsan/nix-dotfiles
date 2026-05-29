@@ -230,7 +230,6 @@
         };
         equicordToolbox.enable = true;
         selfForward.enable = true;
-        voiceStats.enable = true;
       };
     };
   };
