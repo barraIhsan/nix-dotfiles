@@ -50,6 +50,9 @@
   # fzf
   programs.fzf.enable = true;
 
+  # ripgrep
+  programs.ripgrep.enable = true;
+
   # zoxide (cd)
   programs.zoxide.enable = true;
 
