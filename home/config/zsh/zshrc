@@ -55,16 +55,13 @@ alias rsync="rsync -X"
 
 # Yazi shell wrapper
 function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
+  if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    builtin cd -- "$cwd"
+  fi
+  rm -f -- "$tmp"
 }
-
-# Source nvm
-source $NVM_DIR/nvm.sh
 
 # Start ssh-agent (if it's not started yet), and remove any output
 [ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s | grep -v '^echo')"
