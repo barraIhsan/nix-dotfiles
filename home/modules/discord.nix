@@ -12,7 +12,7 @@
     };
 
     # config
-    quickCss = builtins.readFile ../config/discord/discord-quickCss.css;
+    quickCss = builtins.readFile ../config/discord/quickCss.css;
     config = {
       useQuickCss = true;
       plugins = {

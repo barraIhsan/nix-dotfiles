@@ -49,10 +49,10 @@
 
   # eza (ls)
   programs.eza.enable = true;
-  
+
   # bat (cat)
   programs.bat.enable = true;
-  
+
   # yazi
   programs.yazi.enable = true;
 }
