@@ -1,12 +1,10 @@
 { config, ... }:
 {
   # zsh
-  programs.zsh = {
-    enable = true;
-    dotDir = "${config.xdg.configHome}/zsh";
+  xdg.configFile = {
+    "zsh/.zshrc".source = ../config/zsh/zshrc;
+    "zsh/.zshenv".source = ../config/zsh/zshenv;
   };
-  xdg.configFile."zsh/.zshrc".source = ../config/zsh/zshrc;
-  xdg.configFile."zsh/.zshenv".source = ../config/zsh/zshenv;
 
   # starship
   programs.starship = {

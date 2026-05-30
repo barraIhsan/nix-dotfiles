@@ -86,10 +86,17 @@
       "networkmanager"
       "wheel"
     ];
+    shell = pkgs.zsh;
   };
 
   # Install firefox.
   programs.firefox.enable = true;
+
+  # Zsh
+  programs.zsh.enable = true;
+  programs.zsh.shellInit = ''
+    export ZDOTDIR="$HOME/.config/zsh"
+  '';
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
