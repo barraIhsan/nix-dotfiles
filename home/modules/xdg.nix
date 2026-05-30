@@ -1,3 +1,4 @@
+{ config, ... }:
 {
   xdg.enable = true;
   xdg.userDirs = {
@@ -10,5 +11,5 @@
     pictures = "${config.home.homeDirectory}/media";
     videos = "${config.home.homeDirectory}/media";
     projects = "${config.home.homeDirectory}/dev";
-  }
+  };
 }
