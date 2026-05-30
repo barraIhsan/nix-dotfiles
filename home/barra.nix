@@ -2,9 +2,11 @@
 {
   imports = [
     ./modules/xdg.nix
+    ./modules/cli.nix
+
     ./modules/discord.nix
     ./modules/ghostty.nix
-    ./modules/cli.nix
+    ./modules/mpv.nix
   ];
 
   home.username = "barra";
