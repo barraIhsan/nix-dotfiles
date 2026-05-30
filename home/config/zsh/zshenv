@@ -1,16 +1,5 @@
 # ---------------------------------------------------------------------
 
-# XDG Base Directory Specification
-export XDG_CONFIG_HOME=$HOME/.config
-export XDG_CACHE_HOME=$HOME/.cache
-export XDG_DATA_HOME=$HOME/.local/share
-export XDG_STATE_HOME=$HOME/.local/state
-
-# XDG User Directory Specification
-eval $(grep -E '^XDG_.+_DIR=' $XDG_CONFIG_HOME/user-dirs.dirs | sed 's/^/export /')
-
-# ---------------------------------------------------------------------
-
 # use tty gpg
 export GPG_TTY=$(tty)
 

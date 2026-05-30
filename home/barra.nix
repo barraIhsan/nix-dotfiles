@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
+    ./modules/xdg.nix
     ./modules/discord.nix
     ./modules/ghostty.nix
     ./modules/cli.nix
