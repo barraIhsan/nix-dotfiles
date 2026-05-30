@@ -113,7 +113,6 @@
   environment.systemPackages = with pkgs; [
     git
     neovim
-    nh
     btop
     ghostty
     gcc

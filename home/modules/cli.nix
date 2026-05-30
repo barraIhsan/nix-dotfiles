@@ -29,6 +29,12 @@
     };
   };
 
+  # nh
+  programs.nh = {
+    enable = true;
+    osFlake = "${config.xdg.configHome}/nix";
+  };
+
   # fastfetch
   programs.fastfetch.enable = true;
   xdg.configFile."fastfetch/config.jsonc".source = ../config/fastfetch/config.jsonc;
