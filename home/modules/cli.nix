@@ -1,4 +1,4 @@
-{ config, ... }:
+{ pkgs, config, ... }:
 {
   # zsh
   xdg.configFile = {
@@ -40,8 +40,17 @@
   xdg.configFile."fastfetch/config.jsonc".source = ../config/fastfetch/config.jsonc;
 
   # tmux
-  programs.tmux.enable = true;
-  xdg.configFile."tmux/tmux.conf".source = ../config/tmux/tmux.conf;
+  programs.tmux = {
+    enable = true;
+    plugins = with pkgs.tmuxPlugins; [
+      sensible
+      yank
+      vim-tmux-navigator
+      fzf-tmux-url
+      tmux-sessionx
+    ];
+    extraConfig = builtins.readFile ../config/tmux/tmux.conf;
+  };
 
   # yt-dlp
   programs.yt-dlp.enable = true;
