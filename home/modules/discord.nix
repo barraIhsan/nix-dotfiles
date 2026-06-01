@@ -9,6 +9,9 @@
 
       # auto scroll
       autoscroll.enable = true;
+
+      # canary
+      branch = "canary";
     };
 
     # config
