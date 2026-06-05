@@ -3,12 +3,15 @@
     enable = true;
 
     discord = {
+      commandLineArgs = [
+        "--enable-features=VaapiVideoDecoder,MiddleClickAutoscroll"
+        # use wayland and enable IME
+        "--ozone-platform-hint=auto"
+        "--enable-wayland-ime"
+      ];
       # use equicord (vencord but with more plugins)
       vencord.enable = false;
       equicord.enable = true;
-
-      # auto scroll
-      autoscroll.enable = true;
 
       # canary
       branch = "canary";
