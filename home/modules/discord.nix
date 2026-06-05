@@ -45,13 +45,15 @@
               "id" = "b8f2f595-f5ea-4148-8fa6-dbf94311aea2";
             }
             {
-              "find" = "https?:\\/\\/(?:www\\.)?instagram\\.com\\/(reels?|p|stories)(?!.*\\/audio\\b)((\\/[\\w\\.\\-]+)+)[^\\s>),]*";
+              "find" =
+                "https?:\\/\\/(?:www\\.)?instagram\\.com\\/(reels?|p|stories)(?!.*\\/audio\\b)((\\/[\\w\\.\\-]+)+)[^\\s>),]*";
               "replace" = "https://kkinstagram.com/$1$2";
               "onlyIfIncludes" = "";
               "id" = "5ed62ae3-7b0f-4bfe-a251-7bc2e19b0eaa";
             }
             {
-              "find" = "https?:\\/\\/(?:www\\.)?((?:g|d|t)\\.)?(?:twitt(?:e|p)r|(?:fixup)?x)\\.com((\\/\\w+)+)[^\\s>),]*";
+              "find" =
+                "https?:\\/\\/(?:www\\.)?((?:g|d|t)\\.)?(?:twitt(?:e|p)r|(?:fixup)?x)\\.com((\\/\\w+)+)[^\\s>),]*";
               "replace" = "https://$1fxtwitter.com$2";
               "onlyIfIncludes" = "";
               "id" = "82de6567-2be9-4d14-83d5-e36bfaf83fe0";
@@ -63,7 +65,8 @@
               "id" = "ce78ff53-197b-49bf-b480-dd372e77d8d4";
             }
             {
-              "find" = "https?:\\/\\/(?:www\\.|(old\\.))?reddit\\.com\\/r\\/(\\w+)\\/(comments|s)\\/(\\w+)[\\w\\/\\-?=&]*";
+              "find" =
+                "https?:\\/\\/(?:www\\.|(old\\.))?reddit\\.com\\/r\\/(\\w+)\\/(comments|s)\\/(\\w+)[\\w\\/\\-?=&]*";
               "replace" = "https://$1rxddit.com/r/$2/$3/$4";
               "onlyIfIncludes" = "";
               "id" = "a1745df8-a321-4be3-ab82-4f31d539bdae";
@@ -237,6 +240,8 @@
         equicordToolbox.enable = true;
         selfForward.enable = true;
       };
+      # disable translate button on chatbar
+      uiElements.chatBarButtons.translate.enable = false;
     };
   };
 }
