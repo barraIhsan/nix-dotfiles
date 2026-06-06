@@ -9,6 +9,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
   outputs =
@@ -16,8 +21,10 @@
       self,
       nixpkgs,
       home-manager,
+      plasma-manager,
       ...
-    }@inputs: let
+    }@inputs:
+    let
       system = "x86_64-linux";
 
       pkgs = import nixpkgs {
@@ -35,7 +42,8 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./hosts/nixos/configuration.nix
-            home-manager.nixosModules.home-manager {
+            home-manager.nixosModules.home-manager
+            {
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
@@ -43,7 +51,10 @@
                 extraSpecialArgs = {
                   inherit inputs;
                 };
-                sharedModules = [ inputs.nixcord.homeModules.nixcord ];
+                sharedModules = [
+                  inputs.nixcord.homeModules.nixcord
+                  plasma-manager.homeModules.plasma-manager
+                ];
                 users.barra = import ./home/barra.nix;
               };
             }

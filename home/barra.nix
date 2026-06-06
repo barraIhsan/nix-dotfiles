@@ -4,6 +4,7 @@
     ./modules/xdg.nix
     ./modules/cli.nix
 
+    ./modules/plasma.nix
     ./modules/discord.nix
     ./modules/ghostty.nix
     ./modules/mpv.nix
