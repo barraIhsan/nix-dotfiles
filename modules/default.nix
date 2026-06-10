@@ -7,6 +7,7 @@
     ./locale.nix
     ./nixos.nix
     ./user.nix
+    ./bluetooth.nix
     ./desktop.nix
     ./graphics.nix
     ./gaming.nix
