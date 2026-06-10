@@ -35,6 +35,7 @@
                 "applications:firefox.desktop"
                 "applications:discord.desktop"
                 "applications:com.mitchellh.ghostty.desktop"
+                "applications:steam.desktop"
               ];
             };
           }
@@ -56,6 +57,8 @@
                   "org.kde.plasma.brightness"
                   "org.kde.plasma.printmanager"
                   "org.kde.plasma.vault"
+                  "org.kde.plasma.weather"
+                  "plasmashell_microphone"
                   "chrome_status_icon_1" # discord
                 ];
                 # currently doesn't work
