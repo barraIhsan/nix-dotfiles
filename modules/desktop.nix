@@ -1,4 +1,4 @@
-{ ... }: {
+{ pkgs, ... }: {
   # enable plasma and sddm
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
@@ -11,6 +11,13 @@
 
   # cups for printing
   services.printing.enable = true;
+
+  # brightness/backlit
+  environment.systemPackages = [
+    pkgs.ddcutil
+    pkgs.brightnessctl
+  ];
+  hardware.i2c.enable = true;
 
   # install firefox.
   programs.firefox.enable = true;
