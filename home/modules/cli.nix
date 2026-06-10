@@ -38,6 +38,8 @@
   # fastfetch
   programs.fastfetch.enable = true;
   xdg.configFile."fastfetch/config.jsonc".source = ../config/fastfetch/config.jsonc;
+  # for kitty image
+  home.packages = [ pkgs.kitty ];
 
   # tmux
   programs.tmux = {
