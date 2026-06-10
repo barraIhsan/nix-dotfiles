@@ -8,5 +8,7 @@
     ./nvim.nix
     ./ghostty.nix
     ./mpv.nix
+
+    ./misc.nix
   ];
 }
