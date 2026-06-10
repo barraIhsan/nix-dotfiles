@@ -1,0 +1,62 @@
+-- highlight when yank
+vim.api.nvim_create_autocmd("TextYankPost", {
+  callback = function()
+    vim.hl.on_yank()
+  end,
+})
+
+-- disable double left mouse click on help and man page to
+-- jump to tag. The same as Ctrl-]. Instead it will
+-- highlight current word like in any filetype.
+-- and quit with q directly
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "help", "man" },
+  callback = function()
+    vim.keymap.set("n", "<2-LeftMouse>", "viw", { buffer = true, noremap = true })
+    vim.keymap.set("n", "q", "<cmd>quit<CR>", { buffer = true, noremap = true })
+  end,
+})
+
+-- apply chezmoi changes when saving a file
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = vim.fn.expand("$XDG_DATA_HOME") .. "/chezmoi/*",
+  callback = function()
+    vim.system({ "chezmoi", "apply", "--force", "--source-path", vim.fn.expand("%") })
+  end,
+})
+
+-- add hyphen (-) to `isKeyword` on html, and react
+-- for css class especially tailwind
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "html", "javascriptreact", "typescriptreact" },
+  callback = function()
+    vim.opt_local.iskeyword:append("-")
+  end,
+})
+
+-- add colorcolumn on gitcommit file
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "gitcommit" },
+  callback = function()
+    vim.opt_local.colorcolumn = "50,72"
+  end,
+})
+
+-- disable signcolumn on manpages
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "man",
+  callback = function()
+    vim.opt_local.signcolumn = "no"
+  end,
+})
+
+-- auto insert mode on terminal pane
+-- q to exit and Esc to go to normal mode
+vim.api.nvim_create_autocmd("TermOpen", {
+  pattern = "*",
+  callback = function()
+    vim.cmd("startinsert")
+    vim.keymap.set("n", "q", "<cmd>quit<CR>", { buffer = true })
+    vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { buffer = true })
+  end,
+})
