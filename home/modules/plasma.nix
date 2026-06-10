@@ -115,10 +115,14 @@
 
       spectaclerc = {
         General = {
+          # "When launching Spectacle: Do not take a screenshot automatically"
           launchAction = "DoNotTakeScreenshot";
+          # "After taking a screenshot: Save file to default folder & Copy image to clipboard"
           clipboardGroup = "PostScreenshotCopyImage";
           autoSaveImage = true;
+          # "Remember selected area: Never"
           rememberSelectionRect = "Never";
+          # "Rectangular Region Selection: Accept on click-and-release"
           useReleaseToCapture = true;
         };
         ImageSave = {
@@ -127,8 +131,25 @@
         };
         VideoSave.videoSaveLocation = "file://${config.xdg.userDirs.videos}/screencasts/";
       };
+
+      dolphinrc = {
+        General = {
+          # "Keep a single Dolphin window, opening new folders in tabs"
+          OpenExternallyCalledFolderInNewTab = true;
+          # "Display Style: Remember display style for each folder"
+          GlobalViewProps = false;
+          # "Display Style: Use icons view mode for locations which mostly contain media files"
+          DynamicView = true;
+        };
+      };
     };
   };
+
+  # dolphin
+  # menu & toolbar
+  xdg.dataFile."kxmlgui5/dolphin/dolphinui.rc".source = ../config/plasma/dolphin/dolphinui.rc;
+  # locations
+  xdg.dataFile."user-places.xbel".source = ../config/plasma/dolphin/user-places.xbel;
 
   home.packages = [ pkgs.papirus-icon-theme ];
 }
