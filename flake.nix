@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixcord.url = "github:FlameFlag/nixcord";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -14,6 +13,36 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+    nixcord = {
+      url = "github:FlameFlag/nixcord";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    steam-config-nix = {
+      url = "github:different-name/steam-config-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # mpv plugins
+    videoclip = {
+      url = "github:Ajatt-Tools/videoclip";
+      flake = false;
+    };
+    hold-speed = {
+      url = "github:AzuredBlue/hold-speed";
+      flake = false;
+    };
+    seek-to = {
+      url = "github:occivink/mpv-scripts";
+      flake = false;
+    };
+    thumbfast = {
+      url = "github:po5/thumbfast";
+      flake = false;
+    };
+    visualizer = {
+      url = "github:mfcc64/mpv-scripts";
+      flake = false;
+    };
   };
 
   outputs =
@@ -21,12 +50,10 @@
       self,
       nixpkgs,
       home-manager,
-      plasma-manager,
       ...
     }@inputs:
     let
       system = "x86_64-linux";
-
       pkgs = import nixpkgs {
         inherit system;
 
@@ -34,13 +61,13 @@
           allowUnfree = true;
         };
       };
-
     in
     {
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           modules = [
+            inputs.steam-config-nix.nixosModules.default
             ./hosts/nixos/configuration.nix
             home-manager.nixosModules.home-manager
             {
@@ -53,7 +80,7 @@
                 };
                 sharedModules = [
                   inputs.nixcord.homeModules.nixcord
-                  plasma-manager.homeModules.plasma-manager
+                  inputs.plasma-manager.homeModules.plasma-manager
                 ];
                 users.barra = import ./home/barra.nix;
               };
