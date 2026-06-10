@@ -12,9 +12,6 @@
       # use equicord (vencord but with more plugins)
       vencord.enable = false;
       equicord.enable = true;
-
-      # canary
-      branch = "canary";
     };
 
     # config
@@ -109,7 +106,7 @@
           enable = true;
           notificationVolume = 50.0;
         };
-        PinDMs = {
+        pinDms = {
           enable = true;
           pinOrder = 1;
           # https://github.com/FlameFlag/nixcord/issues/205
@@ -159,12 +156,12 @@
         betterSessions.enable = true;
         betterSettings.enable = true;
         biggerStreamPreview.enable = true;
-        BlurNSFW.enable = true;
+        blurNsfw.enable = true;
         callTimer.enable = true;
-        ClearURLs.enable = true;
+        clearUrls.enable = true;
         copyEmojiMarkdown.enable = true;
         copyFileContents.enable = true;
-        CopyUserURLs.enable = true;
+        copyUserUrls.enable = true;
         crashHandler.enable = true;
         dearrow.enable = true;
         disableCallIdle.enable = true;
@@ -191,7 +188,7 @@
         mentionAvatars.enable = true;
         messageLatency.enable = true;
         messageLinkEmbeds.enable = true;
-        MutualGroupDMs.enable = true;
+        mutualGroupDms.enable = true;
         noDevtoolsWarning.enable = true;
         noF1.enable = true;
         noMaskedUrlPaste.enable = true;
@@ -208,7 +205,7 @@
         replyTimestamp.enable = true;
         revealAllSpoilers.enable = true;
         reverseImageSearch.enable = true;
-        ReviewDB.enable = true;
+        reviewDb.enable = true;
         roleColorEverywhere.enable = true;
         secretRingToneEnabler.enable = true;
         serverInfo.enable = true;
@@ -241,7 +238,7 @@
         selfForward.enable = true;
       };
       # disable translate button on chatbar
-      uiElements.chatBarButtons.translate.enable = false;
+      uiElements.chatBarButtons.Translate.enable = false;
     };
   };
 }

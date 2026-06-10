@@ -33,7 +33,7 @@
               launchers = [
                 "applications:org.kde.dolphin.desktop"
                 "applications:firefox.desktop"
-                "applications:discord-canary.desktop"
+                "applications:discord.desktop"
                 "applications:com.mitchellh.ghostty.desktop"
               ];
             };
