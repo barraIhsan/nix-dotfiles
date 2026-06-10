@@ -1,5 +1,10 @@
 { pkgs, config, ... }:
 {
+  home.packages = with pkgs; [
+    kitty # for fastfetch's (kitty) icat
+    ffmpeg
+  ];
+
   # zsh
   xdg.configFile = {
     "zsh/.zshrc".source = ../config/zsh/zshrc;
@@ -38,8 +43,6 @@
   # fastfetch
   programs.fastfetch.enable = true;
   xdg.configFile."fastfetch/config.jsonc".source = ../config/fastfetch/config.jsonc;
-  # for kitty image
-  home.packages = [ pkgs.kitty ];
 
   # tmux
   programs.tmux = {
@@ -63,6 +66,9 @@
 
   # ripgrep
   programs.ripgrep.enable = true;
+
+  # btop
+  programs.btop.enable = true;
 
   # zoxide (cd)
   programs.zoxide.enable = true;

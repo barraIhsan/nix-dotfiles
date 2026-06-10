@@ -1,14 +1,6 @@
 { config, pkgs, ... }:
 {
-  imports = [
-    ./modules/xdg.nix
-    ./modules/cli.nix
-
-    ./modules/plasma.nix
-    ./modules/discord.nix
-    ./modules/ghostty.nix
-    ./modules/mpv.nix
-  ];
+  imports = [ ./modules ];
 
   home.username = "barra";
   home.homeDirectory = "/home/barra";
