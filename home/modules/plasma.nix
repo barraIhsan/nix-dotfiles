@@ -1,4 +1,6 @@
 { pkgs, config, ... }: {
+  services.kdeconnect.enable = true;
+
   programs.plasma = {
     enable = true;
 
