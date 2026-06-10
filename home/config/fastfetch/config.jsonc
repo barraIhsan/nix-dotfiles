@@ -30,7 +30,7 @@
     {
       "type": "os",
       "key": "os",
-      "format": "{name}"
+      "format": "{name} {version}"
     },
     {
       "type": "kernel",
@@ -39,8 +39,7 @@
     },
     {
       "type": "packages",
-      "key": "pkgs",
-      "format": "{pacman} (pacman) {flatpak-all} (flatpak)"
+      "key": "pkgs"
     },
     {
       "type": "memory",
