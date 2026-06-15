@@ -4,7 +4,7 @@
 
     discord = {
       commandLineArgs = [
-        "--enable-features=VaapiVideoDecoder,MiddleClickAutoscroll"
+        "--enable-blink-features=VaapiVideoDecoder,MiddleClickAutoscroll"
         # use wayland and enable IME
         "--ozone-platform-hint=auto"
         "--enable-wayland-ime"
