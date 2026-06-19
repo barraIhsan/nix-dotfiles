@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ config, pkgs, ... }: {
   boot.loader = {
     # systemd-boot
     systemd-boot = {
@@ -18,6 +18,11 @@
   # enable SysRq
   # https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html
   boot.kernel.sysctl."kernel.sysrq" = 1;
+
+  # extra modules
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    v4l2loopback
+  ];
 
   # zram swap
   zramSwap = {
