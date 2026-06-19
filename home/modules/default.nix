@@ -8,6 +8,7 @@
     ./nvim.nix
     ./ghostty.nix
     ./mpv.nix
+    ./obs.nix
 
     ./misc.nix
   ];
