@@ -12,6 +12,8 @@
       # use equicord (vencord but with more plugins)
       vencord.enable = false;
       equicord.enable = true;
+      # see https://github.com/FlameFlag/nixcord/issues/226
+      openASAR.enable = false;
     };
 
     # config
