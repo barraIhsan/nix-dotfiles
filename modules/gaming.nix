@@ -1,6 +1,9 @@
 { pkgs, inputs, ... }: {
+  nixpkgs.overlays = [ inputs.millennium.overlays.default ];
   programs.steam = {
     enable = true;
+    # hash mismatch issue currently
+    # package = pkgs.millennium-steam;
     # proton ge
     extraCompatPackages = [
       pkgs.proton-ge-bin
