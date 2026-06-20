@@ -1,11 +1,32 @@
 { ... }: {
-  networking.hostName = "nixos";
-  # use iwd
-  # networking.wireless.iwd.enable = true;
+  networking = {
+    hostName = "nixos";
+    # use iwd
+    # wireless.iwd.enable = true;
 
-  # Enable networking
-  networking.networkmanager = {
-    enable = true;
-    # wifi.backend = "iwd";
+    # enable networking
+    networkmanager = {
+      enable = true;
+      # wifi.backend = "iwd";
+    };
+
+    # firewall
+    firewall = {
+      enable = true;
+      allowedTCPPortRanges = [
+        # kde connect
+        {
+          from = 1714;
+          to = 1764;
+        }
+      ];
+      allowedUDPPortRanges = [
+        # kde connect
+        {
+          from = 1714;
+          to = 1764;
+        }
+      ];
+    };
   };
 }
