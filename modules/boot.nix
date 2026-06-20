@@ -29,4 +29,10 @@
     enable = true;
     memoryPercent = 100;
   };
+
+  # mount /home
+  fileSystems."/home" = {
+    device = "/dev/disk/by-uuid/d7fffbd4-9725-4865-8415-e6cba1317b7d";
+    fsType = "ext4";
+  };
 }
