@@ -1,8 +1,6 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
     ente-auth
+    tauon
   ];
-  programs.obs-studio = {
-    enable = true;
-  };
 }
