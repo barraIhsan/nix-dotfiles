@@ -1,4 +1,5 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, ... }:
+{
   services.kdeconnect.enable = true;
 
   programs.plasma = {
@@ -14,6 +15,33 @@
     };
 
     session.sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession";
+
+    input = {
+      touchpads = [
+        {
+          vendorId = "06cb";
+          productId = "ce78";
+          name = "SYNA2BA6:00 06CB:CE78 Touchpad";
+          naturalScroll = true;
+        }
+      ];
+      mice = [
+        # wireless 2.4ghz
+        {
+          vendorId = "373b";
+          productId = "10c9";
+          name = "Compx Nearlink Mouse Dongle";
+          accelerationProfile = "none";
+        }
+        # wired
+        {
+          vendorId = "373b";
+          productId = "1135";
+          name = "Compx ATK A9 SE Nearlink";
+          accelerationProfile = "none";
+        }
+      ];
+    };
 
     panels = [
       {

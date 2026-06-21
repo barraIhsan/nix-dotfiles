@@ -20,6 +20,12 @@
   hardware.i2c.enable = true;
 
   # install firefox.
+  # for some reason when i use wired mode on my mouse (ATK A9 SE)
+  # there's one device/event that acts as a keyboard that'll hold right alt
+  # thus disabling me typing normally cuz the right alt is being held
+  services.udev.extraRules = ''
+    SUBSYSTEM=="input", ATTRS{idVendor}=="373b", ATTRS{idProduct}=="1135", ENV{ID_INPUT_KEYBOARD}=="1", ENV{LIBINPUT_IGNORE_DEVICE}="1"
+  '';
   programs.firefox.enable = true;
 
   # zsh
