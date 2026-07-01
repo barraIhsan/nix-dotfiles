@@ -54,4 +54,34 @@
       };
     };
   };
+  xdg.desktopEntries.thunderbird = {
+    name = "Thunderbird";
+    exec = "xdg-fakehome thunderbird thunderbird --name thunderbird %U";
+    comment = "Read and write e-mails or RSS feeds, or manage tasks on calendars.";
+    icon = "thunderbird";
+    categories = [
+      "Network"
+      "Chat"
+      "Email"
+      "Feed"
+      "GTK"
+      "News"
+    ];
+    settings.Keywords = "mail;email;e-mail;messages;rss;calendar;address book;addressbook;chat";
+    mimeType = [
+      "message/rfc822"
+      "x-scheme-handler/mailto"
+      "text/calendar"
+      "text/x-vcardmessage/rfc822"
+      "x-scheme-handler/mailto"
+      "text/calendar"
+      "text/x-vcard"
+    ];
+    actions = {
+      profile-manager-window = {
+        name = "Profile Manager";
+        exec = "xdg-fakehome thunderbird thunderbird --ProfileManager";
+      };
+    };
+  };
 }
