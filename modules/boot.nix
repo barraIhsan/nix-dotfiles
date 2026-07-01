@@ -40,5 +40,8 @@
   systemd.tmpfiles.rules = [
     # enable lenovo's conservation mode (limit at 80% batt)
     "w /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode - - - - 1"
+    # disable write permission on home and documents
+    "z /home/barra 0500 barra users -"
+    "z /home/barra/documents 0500 barra users -"
   ];
 }
