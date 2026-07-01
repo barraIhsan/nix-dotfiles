@@ -5,7 +5,12 @@
 /* Hide gift buttons */
 div[role="button"][aria-label="Give a Gift"],
 div[role="button"][aria-label="Send a gift"],
-:is(span, div):has(>[role="button"][aria-label="Gift"]) {
+:is(span, div):has(> [role="button"][aria-label="Gift"]) {
+  display: none !important;
+}
+
+/* Hide pin badge */
+svg.favoriteIcon__972a0 {
   display: none !important;
 }
 
@@ -75,12 +80,16 @@ https://discord.com/channels/1015060230222131221/1028106818368589824/14206034272
 */
 .user-profile-sidebar::after {
   /* Discord's color setup */
-  --profile-gradient-start: color-mix(in oklab,
-      var(--profile-gradient-overlay-color) 100%,
-      var(--profile-gradient-primary-color));
-  --profile-gradient-end: color-mix(in oklab,
-      var(--profile-gradient-overlay-color) 100%,
-      var(--profile-gradient-secondary-color));
+  --profile-gradient-start: color-mix(
+    in oklab,
+    var(--profile-gradient-overlay-color) 100%,
+    var(--profile-gradient-primary-color)
+  );
+  --profile-gradient-end: color-mix(
+    in oklab,
+    var(--profile-gradient-overlay-color) 100%,
+    var(--profile-gradient-secondary-color)
+  );
   /* The cat */
   content: "  ╱|、   \a" "  (˚ˎ 。7  \a" "  |、˜〵\  \a" "    じしˍ,)ノ";
 
@@ -89,9 +98,11 @@ https://discord.com/channels/1015060230222131221/1028106818368589824/14206034272
   padding: 20px;
   color: white;
   /* Also discords */
-  background: linear-gradient(var(--profile-gradient-start),
-      var(--profile-gradient-start) var(--custom-user-profile-banner-height),
-      var(--profile-gradient-end));
+  background: linear-gradient(
+    var(--profile-gradient-start),
+    var(--profile-gradient-start) var(--custom-user-profile-banner-height),
+    var(--profile-gradient-end)
+  );
   text-align: center;
   font-size: 150%;
 }
