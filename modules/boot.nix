@@ -16,6 +16,16 @@
   # use latest kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  # modprobe
+  boot.extraModprobeConfig = ''
+    # disable desaturate color on power saving
+    # "Vari-Bright"
+    options amdgpu abmlevel=0
+
+    # disable deepcolor
+    options nvidia_modeset hdmi_deepcolor=0
+  '';
+
   # enable SysRq
   # https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html
   boot.kernel.sysctl."kernel.sysrq" = 1;
