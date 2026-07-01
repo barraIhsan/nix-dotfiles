@@ -37,7 +37,12 @@
   # nh
   programs.nh = {
     enable = true;
-    osFlake = "${config.xdg.configHome}/nix";
+    flake = "${config.xdg.configHome}/nix";
+    clean = {
+      enable = true;
+      dates = "weekly";
+      extraArgs = "--keep 5";
+    };
   };
 
   # fastfetch

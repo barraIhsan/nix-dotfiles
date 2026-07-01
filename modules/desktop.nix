@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   # enable plasma and sddm
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
@@ -25,6 +26,10 @@
   services.udev.extraRules = ''
     SUBSYSTEM=="input", ATTRS{idVendor}=="373b", ATTRS{idProduct}=="1135", ENV{ID_INPUT_KEYBOARD}=="1", ENV{LIBINPUT_IGNORE_DEVICE}="1"
   '';
+
+  # flatpak
+  services.flatpak.enable = true;
+
   # mozilla
   programs.firefox.enable = true;
   programs.thunderbird.enable = true;
