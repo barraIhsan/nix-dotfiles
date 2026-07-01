@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   boot.loader = {
     # systemd-boot
     systemd-boot = {
@@ -35,4 +36,9 @@
     device = "/dev/disk/by-uuid/d7fffbd4-9725-4865-8415-e6cba1317b7d";
     fsType = "ext4";
   };
+
+  systemd.tmpfiles.rules = [
+    # enable lenovo's conservation mode (limit at 80% batt)
+    "w /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode - - - - 1"
+  ];
 }
