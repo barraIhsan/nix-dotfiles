@@ -1,0 +1,21 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=image/*
+Actions=webp;avif;png
+X-KDE-Submenu=Image
+
+[Desktop Action webp]
+Name=Convert to WebP
+Icon=autocorrection
+Exec=imgconvert webp %F
+
+[Desktop Action avif]
+Name=Convert to AVIF
+Icon=autocorrection
+Exec=imgconvert avif %F
+
+[Desktop Action png]
+Name=Convert to PNG
+Icon=autocorrection
+Exec=imgconvert png %F

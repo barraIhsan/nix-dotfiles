@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# deps: imagemagick
+mode=$1
+shift
+files=("$@")
+
+for f in "${files[@]}"; do
+  # add number if file already exist
+  output="${f%.*}.$mode"
+  counter=1
+  while [[ -f "$output" ]]; do
+    output="${f%.*}-${counter}.$mode"
+    ((counter++))
+  done
+  magick "$f" "$output"
+done
