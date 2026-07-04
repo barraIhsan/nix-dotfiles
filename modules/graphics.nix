@@ -28,5 +28,8 @@
     enable32Bit = true;
   };
 
-  environment.systemPackages = [ pkgs.supergfxctl ];
+  environment.systemPackages = [
+    pkgs.supergfxctl
+    pkgs.lenovo-legion
+  ];
 }
