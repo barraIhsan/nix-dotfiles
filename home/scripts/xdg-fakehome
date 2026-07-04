@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# deps: coreutils findutils
 
 # Original script is made by @mateusauler on GitHub
 # https://github.com/ValveSoftware/steam-for-linux/issues/1890#issuecomment-1693548157
