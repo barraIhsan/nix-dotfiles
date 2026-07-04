@@ -180,7 +180,6 @@
         fixSpotifyEmbeds.enable = true;
         fixYoutubeEmbeds.enable = true;
         forceOwnerCrown.enable = true;
-        friendsSince.enable = true;
         fullSearchContext.enable = true;
         gifPaste.enable = true;
         greetStickerPicker.enable = true;
@@ -237,7 +236,6 @@
           showOwnTimezone = false;
         };
         equicordToolbox.enable = true;
-        selfForward.enable = true;
       };
       # disable translate button on chatbar
       uiElements.chatBarButtons.Translate.enable = false;
