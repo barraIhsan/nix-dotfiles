@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   home.packages = with pkgs; [
     ente-auth
@@ -11,6 +11,7 @@
     eden
     osu-lazer-bin
     pnpm
+    inputs.kopuz.packages.${pkgs.system}.default
   ];
 
   # syncthing
