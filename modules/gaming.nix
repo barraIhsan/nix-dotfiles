@@ -15,7 +15,4 @@
 
   # gamemode
   programs.gamemode.enable = true;
-
-  # protonup
-  environment.systemPackages = [ pkgs.protonup-qt ];
 }
