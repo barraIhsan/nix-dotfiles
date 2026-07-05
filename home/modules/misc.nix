@@ -10,8 +10,11 @@
     prismlauncher
     eden
     osu-lazer-bin
-    pnpm
+    picard
+    antigravity
     inputs.kopuz.packages.${pkgs.system}.default
+    mkvtoolnix
+    qdirstat
   ];
 
   # syncthing

@@ -3,6 +3,11 @@
   home.packages = with pkgs; [
     kitty # for fastfetch's (kitty) icat
     ffmpeg
+    imagemagick
+    pnpm
+    httpie
+    file
+    scrcpy
   ];
 
   # zsh
