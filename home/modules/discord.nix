@@ -45,33 +45,33 @@
             }
             {
               "find" =
-                "https?:\\/\\/(?:www\\.)?instagram\\.com\\/(reels?|p|stories)(?!.*\\/audio\\b)((\\/[\\w\\.\\-]+)+)[^\\s>),]*";
+                "https?:\\/\\/(?:www\\.)?instagram\\.com\\/(reels?|p|stories)(?!.*\\/audio\\b)(\\/[\\w\\.\\-]{11})[\\/\\w?&=]*";
               "replace" = "https://kkinstagram.com/$1$2";
               "onlyIfIncludes" = "";
               "id" = "5ed62ae3-7b0f-4bfe-a251-7bc2e19b0eaa";
             }
             {
               "find" =
-                "https?:\\/\\/(?:www\\.)?((?:g|d|t)\\.)?(?:twitt(?:e|p)r|(?:fixup)?x)\\.com((\\/\\w+)+)[^\\s>),]*";
+                "https?:\\/\\/(?:www\\.)?((?:g|d|t)\\.)?(?:twitt(?:e|p)r|(?:fixup)?x)\\.com((\\/\\w+){3})[\\/\\w?&=]*";
               "replace" = "https://$1fxtwitter.com$2";
               "onlyIfIncludes" = "";
               "id" = "82de6567-2be9-4d14-83d5-e36bfaf83fe0";
             }
             {
-              "find" = "https?:\\/\\/(?:www\\.)?(v(?:t|m)\\.)?tiktok\\.com((\\/[\\w@]+)+)[^\\s>),]*";
+              "find" = "https?:\\/\\/(?:www\\.)?(v(?:t|m)\\.)?tiktok\\.com((\\/[\\w@]+){3})[\\/\\-\\w?&=]*";
               "replace" = "https://$1tnktok.com$2";
               "onlyIfIncludes" = "";
               "id" = "ce78ff53-197b-49bf-b480-dd372e77d8d4";
             }
             {
               "find" =
-                "https?:\\/\\/(?:www\\.|(old\\.))?reddit\\.com\\/r\\/(\\w+)\\/(comments|s)\\/(\\w+)[\\w\\/\\-?=&]*";
+                "https?:\\/\\/(?:www\\.|(old\\.))?reddit\\.com\\/r\\/(\\w+)\\/(comments|s)\\/(\\w+)[\\/\\-\\w?&=]*";
               "replace" = "https://$1rxddit.com/r/$2/$3/$4";
               "onlyIfIncludes" = "";
               "id" = "a1745df8-a321-4be3-ab82-4f31d539bdae";
             }
             {
-              "find" = "https?:\\/\\/(?:www\\.)?anilist\\.co\\/(anime|manga|character)\\/(\\d+)[^\\s>),]*";
+              "find" = "https?:\\/\\/(?:www\\.)?anilist\\.co\\/(anime|manga|character)\\/(\\d+)[\\/\\-\\w?&=]*";
               "replace" = "https://anilist.co/$1/$2";
               "onlyIfIncludes" = "";
               "id" = "9c4268b4-7094-40e5-9d95-7409d1d9c155";
