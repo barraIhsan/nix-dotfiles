@@ -2,8 +2,8 @@
   imports = [
     ./xdg.nix
     ./scripts.nix
-    ./xdgdesktop.nix
     ./cli.nix
+    ./gaming.nix
 
     ./plasma.nix
     ./discord.nix
