@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   # enable plasma and sddm
   services.displayManager.sddm.enable = true;
@@ -79,4 +79,19 @@
     enable = true;
     enableSSHSupport = true;
   };
+
+  # redis
+  services.redis.servers."".enable = true;
+
+  # docker
+  virtualisation.docker.enable = true;
+
+  # postgres
+  services.postgresql.enable = true;
+
+  # dont enable the service, rather i'd start the service myself
+  systemd.targets.postgresql.wantedBy = lib.mkForce [ ];
+  systemd.services.redis.wantedBy = lib.mkForce [ ];
+  systemd.services.docker.wantedBy = lib.mkForce [ ];
+  systemd.sockets.docker.wantedBy = lib.mkForce [ ];
 }
