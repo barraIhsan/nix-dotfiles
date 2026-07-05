@@ -183,6 +183,11 @@
   xdg.dataFile."kxmlgui5/dolphin/dolphinui.rc".source = ../config/plasma/dolphin/dolphinui.rc;
   # locations
   xdg.dataFile."user-places.xbel".source = ../config/plasma/dolphin/user-places.xbel;
+  # scripts (kio servicemenus)
+  xdg.dataFile."kio/servicemenus" = {
+    source = ../config/plasma/kioservicemenus;
+    recursive = true;
+  };
 
   home.packages = [ pkgs.papirus-icon-theme ];
 }
