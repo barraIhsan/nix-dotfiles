@@ -25,7 +25,6 @@
       url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    kopuz.url = "github:temidaradev/kopuz";
 
     # mpv plugins
     videoclip = {
