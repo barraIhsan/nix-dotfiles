@@ -1,21 +1,24 @@
+{ inputs, pkgs, ... }:
 {
   programs.nixcord = {
     enable = true;
 
     discord = {
       commandLineArgs = [
-        "--enable-blink-features=VaapiVideoDecoder,MiddleClickAutoscroll"
+        "--enable-blink-features=MiddleClickAutoscroll"
+        # enable vaapi
+        "--render-node-override=/dev/dri/renderD129"
         # use wayland and enable IME
         "--ozone-platform-hint=auto"
         "--enable-wayland-ime"
       ];
-      # use equicord (vencord but with more plugins)
-      vencord.enable = false;
-      equicord.enable = true;
-      # see https://github.com/FlameFlag/nixcord/issues/226
-      openASAR.enable = false;
       vencord = {
         enable = true;
+        package = inputs.nixcord.packages.${pkgs.stdenv.hostPlatform.system}.vencord.overrideAttrs (old: {
+          patches = (old.patches or [ ]) ++ [
+            ../config/discord/vencord.patch
+          ];
+        });
       };
       openASAR.enable = true;
     };
