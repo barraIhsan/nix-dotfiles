@@ -14,6 +14,10 @@
       equicord.enable = true;
       # see https://github.com/FlameFlag/nixcord/issues/226
       openASAR.enable = false;
+      vencord = {
+        enable = true;
+      };
+      openASAR.enable = true;
     };
 
     # config
@@ -95,6 +99,7 @@
         messageLogger = {
           enable = true;
           inlineEdits = false;
+          ignoreBots = true;
         };
         newGuildSettings = {
           enable = true;
@@ -195,7 +200,6 @@
         noMaskedUrlPaste.enable = true;
         noOnboardingDelay.enable = true;
         noPendingCount.enable = true;
-        normalizeMessageLinks.enable = true;
         noUnblockToJump.enable = true;
         openInApp.enable = true;
         pauseInvitesForever.enable = true;
@@ -229,13 +233,16 @@
         voiceMessages.enable = true;
         youtubeAdblock.enable = true;
 
+        vencordToolbox.enable = true;
+
         # equicord
-        timezones = {
-          enable = true;
-          askedTimezone = true;
-          showOwnTimezone = false;
-        };
-        equicordToolbox.enable = true;
+        # timezones = {
+        #   enable = true;
+        #   askedTimezone = true;
+        #   showOwnTimezone = false;
+        # };
+        # normalizeMessageLinks.enable = true;
+        # equicordToolbox.enable = true;
       };
       # disable translate button on chatbar
       uiElements.chatBarButtons.Translate.enable = false;
