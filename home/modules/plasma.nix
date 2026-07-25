@@ -16,6 +16,19 @@
 
     session.sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession";
 
+    # power management
+    # also set 30% as "low battery" in the configFile
+    powerdevil = {
+      AC = {
+        autoSuspend.action = "nothing";
+        powerButtonAction = "showLogoutScreen";
+        powerProfile = "performance";
+        turnOffDisplay.idleTimeout = 900; # 15 minutes
+      };
+      battery.powerProfile = "powerSaving";
+      lowBattery.powerProfile = "powerSaving";
+    };
+
     input = {
       touchpads = [
         {
@@ -174,6 +187,10 @@
           # "Display Style: Use icons view mode for locations which mostly contain media files"
           DynamicView = true;
         };
+      };
+
+      powerdevilrc = {
+        BatteryManagement.BatteryLowLevel = 30;
       };
     };
   };
