@@ -2,13 +2,18 @@
 Type=Service
 ServiceTypes=KonqPopupMenu/Plugin
 MimeType=video/*
-Actions=mp4;mp4quality;resolve
+Actions=mp4;mp4hevc;mp4quality;resolve
 X-KDE-Submenu=Transcode
 
 [Desktop Action mp4]
 Name=Transcode to mp4 (h264/aac)
 Icon=folder-video-symbolic
 Exec=transcode mp4 %F
+
+[Desktop Action mp4hevc]
+Name=Transcode to mp4 hevc (h265/aac)
+Icon=folder-video-symbolic
+Exec=transcode mp4hevc %F
 
 [Desktop Action mp4quality]
 Name=Transcode to mp4 quality (h264/aac)
