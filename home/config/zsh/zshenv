@@ -60,6 +60,7 @@ export PYTHON_HISTORY=$XDG_STATE_HOME/python_history
 typeset -U path PATH # prevent duplicate
 
 path=(~/.local/bin $path)
+path+=$PNPM_HOME/bin
 path+=$CARGO_HOME/bin
 path+=$FVM_CACHE_PATH/default/bin
 
