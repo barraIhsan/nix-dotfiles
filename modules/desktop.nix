@@ -10,6 +10,10 @@
     variant = "";
   };
 
+  # mullvad
+  services.mullvad-vpn.enable = true;
+  services.mullvad-vpn.package = pkgs.mullvad-vpn;
+
   # use fcitx5 for IME and install mozc (jp)
   i18n.inputMethod = {
     enable = true;
@@ -82,6 +86,9 @@
     enable = true;
     enableSSHSupport = true;
   };
+
+  # tailscale
+  services.tailscale.enable = true;
 
   # redis
   services.redis.servers."".enable = true;
