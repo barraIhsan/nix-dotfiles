@@ -27,7 +27,7 @@ export -f link_dir
 
 mkdir -p "$fakeHome"
 find "$fakeHome" -maxdepth 1 -type l -delete
-# shellcheck disable=SC2016
-find "$HOME" -maxdepth 1 -print0 | xargs --max-procs="$(nproc)" -I{} bash -c 'link_dir "$0"' {}
+# shellcheck disable=SC2016,SC2038
+find "$HOME" -maxdepth 1 | xargs --max-procs="$(nproc)" -I{} bash -c 'link_dir "$0"' {}
 
 HOME="$fakeHome" exec "$bin" "$@"
