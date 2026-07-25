@@ -72,6 +72,9 @@
   programs.zsh.enable = true;
   programs.zsh.shellInit = ''
     export ZDOTDIR="$HOME/.config/zsh"
+    for f in /etc/profiles/per-user/*/etc/profile.d/hm-session-vars.sh; do
+      [ -r "$f" ] && . "$f"
+    done
   '';
 
   # gnupg
