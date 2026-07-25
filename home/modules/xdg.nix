@@ -3,6 +3,9 @@
   xdg = {
     enable = true;
     userDirs = {
+      enable = true;
+      setSessionVariables = true;
+
       desktop = "${config.home.homeDirectory}";
       download = "${config.home.homeDirectory}/downloads";
       templates = "${config.home.homeDirectory}";
@@ -20,6 +23,7 @@
     };
 
     # mime
+    configFile."mimeapps.list".force = true;
     mimeApps = {
       enable = true;
       defaultApplications = {
