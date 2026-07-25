@@ -12,9 +12,11 @@
     osu-lazer-bin
     picard
     antigravity
-    inputs.kopuz.packages.${pkgs.system}.default
     mkvtoolnix
     qdirstat
+    qalculate-gtk
+    xournalpp
+    gparted
   ];
 
   # syncthing

@@ -206,5 +206,8 @@
     recursive = true;
   };
 
-  home.packages = [ pkgs.papirus-icon-theme ];
+  home.packages = with pkgs; [
+    kdePackages.kcolorchooser
+    papirus-icon-theme
+  ];
 }
