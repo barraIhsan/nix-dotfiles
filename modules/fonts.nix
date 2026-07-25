@@ -1,10 +1,12 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   # fonts
   fonts = {
     packages = with pkgs; [
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
+      noto-fonts-lgc-plus
       noto-fonts-color-emoji
 
       twemoji-color-font
