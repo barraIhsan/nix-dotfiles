@@ -172,7 +172,8 @@
           useReleaseToCapture = true;
         };
         ImageSave = {
-          imageCompressionQuality = 100;
+          preferredImageFormat = "AVIF";
+          imageCompressionQuality = 90;
           imageSaveLocation = "file://${config.xdg.userDirs.pictures}/screenshots/";
         };
         VideoSave.videoSaveLocation = "file://${config.xdg.userDirs.videos}/screencasts/";
