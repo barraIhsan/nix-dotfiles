@@ -31,6 +31,13 @@
         # vencord
         textReplace = {
           enable = true;
+          stringRules = [
+            {
+              # why? why not
+              find = "omw";
+              replace = "On my way!";
+            }
+          ];
           regexRules = [
             {
               "find" = "([^:])\\\\\\s*$";
