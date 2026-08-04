@@ -15,4 +15,9 @@
 
   # gamemode
   programs.gamemode.enable = true;
+
+  # tablet (osu)
+  hardware.opentabletdriver.enable = true;
+  hardware.uinput.enable = true;
+  boot.kernelModules = [ "uinput" ];
 }
