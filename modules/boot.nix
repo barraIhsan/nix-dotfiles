@@ -54,4 +54,14 @@
     "z /home/barra 0500 barra users -"
     "z /home/barra/documents 0500 barra users -"
   ];
+
+  # symlink /bin/bash, because people often used /bin/bash instead of the /usr/bin/env bash
+  # nix also seems to symlink sh to /bin/sh by default
+  system.activationScripts.binbash = {
+    text = ''
+      mkdir -p /bin
+      ln -sf ${pkgs.bash}/bin/bash /bin/bash
+    '';
+  };
+
 }
