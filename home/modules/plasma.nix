@@ -193,6 +193,10 @@
       powerdevilrc = {
         BatteryManagement.BatteryLowLevel = 30;
       };
+
+      plasmanotifyrc = {
+        DoNotDisturb.WhenFullscreen = false;
+      };
     };
   };
 
