@@ -4,8 +4,7 @@
 
 /* Hide gift buttons */
 div[role="button"][aria-label="Give a Gift"],
-div[role="button"][aria-label="Send a gift"],
-:is(span, div):has(> [role="button"][aria-label="Gift"]) {
+div[role="button"][aria-label="Send a gift"] {
   display: none !important;
 }
 
