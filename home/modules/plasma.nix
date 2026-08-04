@@ -213,6 +213,7 @@
 
   home.packages = with pkgs; [
     kdePackages.kcolorchooser
+    kdePackages.krfb
     papirus-icon-theme
   ];
 }

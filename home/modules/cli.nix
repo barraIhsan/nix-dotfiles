@@ -8,6 +8,11 @@
     httpie
     file
     scrcpy
+    android-tools
+    uv
+    p7zip
+    wakatime-cli
+    jq
   ];
 
   # zsh

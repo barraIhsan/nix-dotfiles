@@ -17,6 +17,7 @@
     qalculate-gtk
     xournalpp
     gparted
+    spek
   ];
 
   # syncthing
