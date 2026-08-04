@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 {
+  home.preferXdgDirectories = true;
   xdg = {
     enable = true;
     userDirs = {
