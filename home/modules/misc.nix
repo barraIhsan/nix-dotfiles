@@ -11,12 +11,12 @@
     eden
     osu-lazer-bin
     picard
-    antigravity
     mkvtoolnix
     qdirstat
     qalculate-gtk
     xournalpp
     gparted
+    opencode
     spek
   ];
 
