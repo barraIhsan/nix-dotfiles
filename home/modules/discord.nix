@@ -141,7 +141,7 @@
         };
         shikiCodeblocks = {
           enable = true;
-          theme = "https://raw.githubusercontent.com/shikijs/textmate-grammars-themes/bc5436518111d87ea58eb56d97b3f9bec30e6b83/packages/tm-themes/themes/catppuccin-mocha.json";
+          theme = "https://cdn.jsdelivr.net/gh/shikijs/textmate-grammars-themes@bc5436518111d87ea58eb56d97b3f9bec30e6b83/packages/tm-themes/themes/catppuccin-mocha.json";
         };
         volumeBooster = {
           enable = true;
@@ -170,7 +170,6 @@
         fakeNitro.enable = true;
         fakeProfileThemes.enable = true;
         favoriteEmojiFirst.enable = true;
-        favoriteGifSearch.enable = true;
         fixCodeblockGap.enable = true;
         fixImagesQuality.enable = true;
         fixSpotifyEmbeds.enable = true;
