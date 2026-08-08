@@ -28,26 +28,33 @@
     mimeApps = {
       enable = true;
       defaultApplications = {
-        "inode/directory" = "org.kde.dolphin.desktop";
+        "inode/directory" = [
+          "org.kde.dolphin.desktop"
+          "mpv.desktop"
+          "qdirstat.desktop"
+        ];
         "application/xml" = "org.kde.kate.desktop";
 
-        "video/x-matroska" = "mpv.desktop";
+        "video/x-matroska" = [
+          "mpv.desktop"
+          "org.bunkus.mkvtoolnix-gui.desktop"
+        ];
         "video/mp4" = "mpv.desktop";
+        "video/quicktime" = "mpv.desktop";
         "video/webm" = "mpv.desktop";
+        "audio/flac" = [
+          "mpv.desktop"
+          "org.musicbrainz.Picard.desktop"
+        ];
+        "audio/vnd.wave" = "mpv.desktop";
+        "audio/ogg" = "mpv.desktop";
+        "audio/mpeg" = "mpv.desktop";
         "image/gif" = "mpv.desktop";
 
         "image/png" = "org.kde.gwenview.desktop";
         "image/jpeg" = "org.kde.gwenview.desktop";
         "image/webp" = "org.kde.gwenview.desktop";
         "image/avif" = "org.kde.gwenview.desktop";
-      };
-      associations.added = {
-        "inode/directory" = [
-          "mpv.desktop"
-          "qdirstat.desktop"
-        ];
-        "audio/flac" = "org.musicbrainz.Picard.desktop";
-        "video/x-matroska" = "org.bunkus.mkvtoolnix-gui.desktop";
       };
     };
 
