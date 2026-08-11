@@ -20,7 +20,8 @@
           ];
         });
       };
-      openASAR.enable = true;
+      openASAR.enable = false;
+      krisp.enable = true;
     };
 
     # config
