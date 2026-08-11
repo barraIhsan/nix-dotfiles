@@ -102,7 +102,7 @@
                   "org.kde.plasma.vault"
                   "org.kde.plasma.weather"
                   "plasmashell_microphone"
-                  "chrome_status_icon_1@.Discord-wrappe" # discord
+                  "discord_status_icon_1"
                 ];
                 # currently doesn't work
                 # see https://github.com/nix-community/plasma-manager/issues/565#issuecomment-3837849097
