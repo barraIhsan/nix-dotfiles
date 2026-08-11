@@ -13,6 +13,8 @@
     p7zip
     wakatime-cli
     jq
+    tealdeer
+    pandoc
   ];
 
   # zsh
