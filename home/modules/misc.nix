@@ -9,6 +9,8 @@
     obsidian
     prismlauncher
     eden
+    texliveSmall
+    typst
     osu-lazer-bin
     picard
     mkvtoolnix
@@ -18,6 +20,7 @@
     gparted
     opencode
     spek
+    onlyoffice-desktopeditors
   ];
 
   # syncthing
