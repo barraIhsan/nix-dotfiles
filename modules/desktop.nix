@@ -51,13 +51,6 @@
   # cups for printing
   services.printing.enable = true;
 
-  # brightness/backlit
-  environment.systemPackages = [
-    pkgs.ddcutil
-    pkgs.brightnessctl
-  ];
-  hardware.i2c.enable = true;
-
   # for some reason when i use wired mode on my mouse (ATK A9 SE)
   # there's one device/event that acts as a keyboard that'll hold right alt
   # thus disabling me typing normally cuz the right alt is being held
