@@ -84,6 +84,10 @@
           square = true;
           size = 500.0;
         };
+        messageLatency = {
+          enable = true;
+          showMillis = true;
+        };
         messageLogger = {
           enable = true;
           inlineEdits = false;
@@ -140,6 +144,11 @@
           enable = true;
           theme = "https://cdn.jsdelivr.net/gh/shikijs/textmate-grammars-themes@bc5436518111d87ea58eb56d97b3f9bec30e6b83/packages/tm-themes/themes/catppuccin-mocha.json";
         };
+        voiceMessages = {
+          enable = true;
+          echoCancellation = false;
+          noiseSuppression = false;
+        };
         volumeBooster = {
           enable = true;
           multiplier = 3.0;
@@ -152,6 +161,7 @@
         biggerStreamPreview.enable = true;
         blurNsfw.enable = true;
         callTimer.enable = true;
+        characterCounter.enable = true;
         clearUrls.enable = true;
         copyFileContents.enable = true;
         crashHandler.enable = true;
@@ -171,7 +181,6 @@
         implicitRelationships.enable = true;
         memberCount.enable = true;
         mentionAvatars.enable = true;
-        messageLatency.enable = true;
         messageLinkEmbeds.enable = true;
         mutualGroupDms.enable = true;
         noDevtoolsWarning.enable = true;
@@ -208,7 +217,6 @@
         validUser.enable = true;
         viewIcons.enable = true;
         voiceDownload.enable = true;
-        voiceMessages.enable = true;
         youtubeAdblock.enable = true;
         vencordToolbox.enable = true;
       };
