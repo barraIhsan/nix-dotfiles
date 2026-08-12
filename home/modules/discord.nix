@@ -79,10 +79,6 @@
           enablePluginPresetQuotes = false;
           additionalQuotes = "read if cute|meow :3|sometimes it takes a real man to become the best girl|roxy is proud of you!|nodnod|ganbatte!|separate fiction from reality|so based|hey! dw about it, everything will be alright!! trust|feelin cute|don't take someone's opinion too seriously|hello~ anyone theree??|...|ykwim|hmph|hewwo|she's so cuteeee|keep her till marriage :3|wife material|11/10 girl|she's the one|why are you so cutee baee|im so lucky to have you|cunnyyyy";
         };
-        consoleJanitor = {
-          enable = true;
-          disableLoggers = true;
-        };
         imageZoom = {
           enable = true;
           square = true;
@@ -153,14 +149,11 @@
         betterGifAltText.enable = true;
         betterRoleContext.enable = true;
         betterSessions.enable = true;
-        betterSettings.enable = true;
         biggerStreamPreview.enable = true;
         blurNsfw.enable = true;
         callTimer.enable = true;
         clearUrls.enable = true;
-        copyEmojiMarkdown.enable = true;
         copyFileContents.enable = true;
-        copyUserUrls.enable = true;
         crashHandler.enable = true;
         dearrow.enable = true;
         disableCallIdle.enable = true;
@@ -168,17 +161,12 @@
         dontRoundMyTimestamps.enable = true;
         experiments.enable = true;
         expressionCloner.enable = true;
-        fakeNitro.enable = true;
-        fakeProfileThemes.enable = true;
         favoriteEmojiFirst.enable = true;
-        fixCodeblockGap.enable = true;
         fixImagesQuality.enable = true;
         fixSpotifyEmbeds.enable = true;
         fixYoutubeEmbeds.enable = true;
         forceOwnerCrown.enable = true;
-        fullSearchContext.enable = true;
         gifPaste.enable = true;
-        greetStickerPicker.enable = true;
         hideMedia.enable = true;
         implicitRelationships.enable = true;
         memberCount.enable = true;
@@ -197,7 +185,6 @@
         permissionFreeWill.enable = true;
         permissionsViewer.enable = true;
         pictureInPicture.enable = true;
-        reactErrorDecoder.enable = true;
         replyTimestamp.enable = true;
         revealAllSpoilers.enable = true;
         reverseImageSearch.enable = true;
@@ -223,17 +210,7 @@
         voiceDownload.enable = true;
         voiceMessages.enable = true;
         youtubeAdblock.enable = true;
-
         vencordToolbox.enable = true;
-
-        # equicord
-        # timezones = {
-        #   enable = true;
-        #   askedTimezone = true;
-        #   showOwnTimezone = false;
-        # };
-        # normalizeMessageLinks.enable = true;
-        # equicordToolbox.enable = true;
       };
       # disable translate button on chatbar
       uiElements.chatBarButtons.Translate.enable = false;
