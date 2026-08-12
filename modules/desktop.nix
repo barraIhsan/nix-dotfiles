@@ -1,11 +1,44 @@
 { pkgs, lib, ... }:
+let
+  user = "barra";
+in
 {
   # enable plasma and sddm
-  services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
     elisa
   ];
+  services.displayManager.sddm = {
+    enable = true;
+    wayland = {
+      enable = true;
+      compositor = "kwin";
+    };
+    theme = "breeze";
+    extraPackages = [ pkgs.papirus-icon-theme ];
+    settings.Theme.CursorTheme = "miku";
+  };
+
+  # sync plasma config into sddm
+  systemd.services.sddm-sync-plasma-config = {
+    description = "Sync Plasma theme/display config into SDDM";
+    before = [ "display-manager.service" ];
+    wantedBy = [ "display-manager.service" ];
+    serviceConfig = {
+      Type = "oneshot";
+      RemainAfterExit = true;
+    };
+    script = ''
+      mkdir -p /var/lib/sddm/.config
+      for f in kdeglobals plasmarc kwinoutputconfig.json kcminputrc; do
+        src="/home/${user}/.config/$f"
+        if [ -f "$src" ]; then
+          cp -f "$src" "/var/lib/sddm/.config/$f"
+        fi
+      done
+      chown -R sddm:sddm /var/lib/sddm/.config
+    '';
+  };
 
   # configure keymap in X11
   services.xserver.xkb = {
