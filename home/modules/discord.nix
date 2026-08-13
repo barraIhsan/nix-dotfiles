@@ -207,6 +207,7 @@
         spotifyCrack.enable = true;
         spotifyShareCommands.enable = true;
         stickerPaste.enable = true;
+        tenorGifSearch.enable = true;
         themeAttributes.enable = true;
         translate.enable = true;
         typingTweaks.enable = true;
@@ -215,10 +216,10 @@
         unsuppressEmbeds.enable = true;
         validReply.enable = true;
         validUser.enable = true;
+        vencordToolbox.enable = true;
         viewIcons.enable = true;
         voiceDownload.enable = true;
         youtubeAdblock.enable = true;
-        vencordToolbox.enable = true;
       };
       # disable translate button on chatbar
       uiElements.chatBarButtons.Translate.enable = false;
