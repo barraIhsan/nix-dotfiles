@@ -14,6 +14,14 @@
     # firewall
     firewall = {
       enable = true;
+      allowedTCPPorts = [
+        # localsend
+        53317
+      ];
+      allowedUDPPorts = [
+        # localsend
+        53317
+      ];
       allowedTCPPortRanges = [
         # kde connect
         {

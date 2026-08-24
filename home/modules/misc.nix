@@ -21,6 +21,7 @@
     opencode
     spek
     onlyoffice-desktopeditors
+    localsend
   ];
 
   # syncthing
