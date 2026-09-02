@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   xdg.configFile."nvim" = {
     source = config.lib.file.mkOutOfStoreSymlink ../config/nvim;
     recursive = false;
@@ -11,11 +12,15 @@
     gnumake
     cargo
     rust-analyzer
+    rustc
+    clippy
+    rustfmt
     ripgrep
     nodejs
     nixfmt
     wakatime-cli
     tree-sitter
     wl-clipboard
+    unzip
   ];
 }
