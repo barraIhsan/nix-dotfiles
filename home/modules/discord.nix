@@ -54,19 +54,19 @@
             }
             {
               find = "https?:\\/\\/(?:www\\.)?instagram\\.com\\/(reels?|p|stories)(?!.*\\/audio\\b)(\\/[\\w\\.\\-]{11})[\\/\\w?&=]*";
-              replace = "https://kkinstagram.com/$1$2";
+              replace = "https://oginstagram.com/$1$2";
             }
             {
               find = "https?:\\/\\/(?:www\\.)?((?:g|d|t)\\.)?(?:twitt(?:e|p)r|(?:fixup)?x)\\.com((\\/\\w+){3})[\\/\\w?&=]*";
               replace = "https://$1fxtwitter.com$2";
             }
             {
-              find = "https?:\\/\\/(?:www\\.)?(v(?:t|m)\\.)?tiktok\\.com((\\/[\\w@]+){3})[\\/\\-\\w?&=]*";
+              find = "https?:\\/\\/(?:www\\.)?(v(?:t|m)\\.)?tiktok\\.com((\\/[\\w@]+){1,3})[\\/\\-\\w?&=]*";
               replace = "https://$1tnktok.com$2";
             }
             {
-              find = "https?:\\/\\/(?:www\\.|(old\\.))?reddit\\.com\\/r\\/(\\w+)\\/(comments|s)\\/(\\w+)[\\/\\-\\w?&=]*";
-              replace = "https://$1rxddit.com/r/$2/$3/$4";
+              find = "https?:\\/\\/(?:www\\.|old\\.)?reddit\\.com\\/r\\/(\\w+)\\/(comments|s)\\/(\\w+)[\\/\\-\\w?&=]*";
+              replace = "https://vxreddit.com/r/$1/$2/$3";
             }
             {
               find = "https?:\\/\\/(?:www\\.)?anilist\\.co\\/(anime|manga|character)\\/(\\d+)[\\/\\-\\w?&=]*";
