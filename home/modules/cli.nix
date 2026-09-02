@@ -74,6 +74,9 @@
     extraConfig = builtins.readFile ../config/tmux/tmux.conf;
   };
 
+  # nodejs
+  xdg.configFile."npm/npmrc".source = ../config/npm/npmrc;
+
   # yt-dlp
   programs.yt-dlp.enable = true;
   xdg.configFile."yt-dlp/config".source = ../config/yt-dlp/config;
