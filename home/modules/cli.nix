@@ -17,6 +17,7 @@
     pandoc
     dialog
     libnotify
+    whisperx
   ];
 
   # zsh
