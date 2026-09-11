@@ -141,6 +141,9 @@
         RectangularRegionScreenShot = "Print";
         _launch = "none";
       };
+      kwin = {
+        "Window Fullscreen" = "Meta+F11";
+      };
     };
 
     configFile = {
