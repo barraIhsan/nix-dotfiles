@@ -12,14 +12,7 @@
         "--ozone-platform-hint=auto"
         "--enable-wayland-ime"
       ];
-      vencord = {
-        enable = true;
-        package = inputs.nixcord.packages.${pkgs.stdenv.hostPlatform.system}.vencord.overrideAttrs (old: {
-          patches = (old.patches or [ ]) ++ [
-            ../config/discord/vencord.patch
-          ];
-        });
-      };
+      vencord.enable = true;
       openASAR.enable = false;
       krisp.enable = true;
     };
@@ -154,6 +147,7 @@
           enable = true;
           multiplier = 3.0;
         };
+        addAttachments.enable = true;
         alwaysAnimate.enable = true;
         anonymiseFileNames.enable = true;
         betterGifAltText.enable = true;
@@ -182,7 +176,6 @@
         implicitRelationships.enable = true;
         memberCount.enable = true;
         mentionAvatars.enable = true;
-        messageLinkEmbeds.enable = true;
         mutualGroupDms.enable = true;
         noDevtoolsWarning.enable = true;
         noF1.enable = true;
@@ -223,7 +216,10 @@
         youtubeAdblock.enable = true;
       };
       # disable translate button on chatbar
-      uiElements.chatBarButtons.Translate.enable = false;
+      uiElements = {
+        chatBarButtons.Translate.enable = false;
+        messagePopoverButtons.AddAttachments.enable = false;
+      };
     };
   };
 }
