@@ -15,6 +15,8 @@
     jq
     tealdeer
     pandoc
+    dialog
+    libnotify
   ];
 
   # zsh

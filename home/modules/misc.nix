@@ -22,12 +22,17 @@
     spek
     onlyoffice-desktopeditors
     localsend
+    inputs.winapps.packages.${pkgs.system}.winapps
+    freerdp
   ];
 
   # syncthing
   services.syncthing = {
     enable = true;
   };
+
+  # winapps
+  xdg.configFile."winapps/winapps.conf".source = ../config/winapps/winapps.conf;
 
   # gtk config
   # Breeze GTK weird combobox menu scroll arrow bug at certain font sizes
