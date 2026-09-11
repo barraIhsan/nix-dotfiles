@@ -21,6 +21,7 @@
     opencode
     spek
     onlyoffice-desktopeditors
+    easyeffects
     localsend
     inputs.winapps.packages.${pkgs.system}.winapps
     freerdp
