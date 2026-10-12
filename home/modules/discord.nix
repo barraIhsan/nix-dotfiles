@@ -17,6 +17,13 @@
       krisp.enable = true;
     };
 
+    # user plugins
+    userPlugins = {
+      latex = "github:vgskye/ventex/a808366a824a944395ffabd60a0071137080fce0";
+    };
+    extraConfig.plugins = {
+      KaTeX.enable = true;
+    };
     # config
     quickCss = builtins.readFile ../config/discord/quickCss.css;
     config = {
@@ -138,6 +145,10 @@
           enable = true;
           theme = "https://cdn.jsdelivr.net/gh/shikijs/textmate-grammars-themes@bc5436518111d87ea58eb56d97b3f9bec30e6b83/packages/tm-themes/themes/catppuccin-mocha.json";
         };
+        viewRaw = {
+          enable = true;
+          messageContextMenu = true;
+        };
         voiceMessages = {
           enable = true;
           echoCancellation = false;
@@ -219,6 +230,7 @@
       uiElements = {
         chatBarButtons.Translate.enable = false;
         messagePopoverButtons.AddAttachments.enable = false;
+        messagePopoverButtons.ViewRaw.enable = false;
       };
     };
   };
