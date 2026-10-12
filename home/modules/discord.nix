@@ -172,6 +172,7 @@
         fixYoutubeEmbeds.enable = true;
         forceOwnerCrown.enable = true;
         gifPaste.enable = true;
+        gifProviderSwitcher.enable = true;
         hideMedia.enable = true;
         implicitRelationships.enable = true;
         memberCount.enable = true;
@@ -201,7 +202,6 @@
         spotifyCrack.enable = true;
         spotifyShareCommands.enable = true;
         stickerPaste.enable = true;
-        tenorGifSearch.enable = true;
         themeAttributes.enable = true;
         translate.enable = true;
         typingTweaks.enable = true;
