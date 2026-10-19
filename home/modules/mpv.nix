@@ -2,9 +2,10 @@
 {
   programs.mpv = {
     enable = true;
-    scripts = [
-      pkgs.mpvScripts.uosc
-      pkgs.mpvScripts.mpris
+    scripts = with pkgs.mpvScripts; [
+      uosc
+      mpris
+      webtorrent-mpv-hook
     ];
   };
 
