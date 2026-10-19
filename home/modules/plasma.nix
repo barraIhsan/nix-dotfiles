@@ -12,7 +12,16 @@
 
       # no middle click paste please
       enableMiddleClickPaste = false;
+
+      # wallpaper
+      wallpaperCustomPlugin = {
+        plugin = "luisbocanegra.smart.video.wallpaper.reborn";
+        config.General.VideoUrls = ''[{"filename":"file://${config.xdg.userDirs.videos}/wp.mp4","enabled":true}]'';
+      };
     };
+
+    # lockscreen wallpaper
+    kscreenlocker.appearance.wallpaper = "${config.xdg.userDirs.pictures}/lock.png";
 
     session.sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession";
 
