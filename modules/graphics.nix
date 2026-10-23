@@ -28,8 +28,9 @@
     enable32Bit = true;
   };
 
+  services.supergfxd.enable = true;
+
   environment.systemPackages = with pkgs; [
-    supergfxctl
     lenovo-legion
   ];
 }
