@@ -22,7 +22,7 @@
     onlyoffice-desktopeditors
     easyeffects
     localsend
-    inputs.winapps.packages.${pkgs.system}.winapps
+    inputs.winapps.packages.${pkgs.stdenv.hostPlatform.system}.winapps
     freerdp
     audacity
     aegisub
