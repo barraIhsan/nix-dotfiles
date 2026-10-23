@@ -40,14 +40,34 @@ run_ffmpeg() {
     output="${base}-converted-${counter}.mp4"
     ((counter++))
   done
+
+  error_log=$(mktemp)
+
   # shellcheck disable=SC2086
-  ffmpeg -i "$file" -map 0 $vc $ac "${output}" -progress pipe:1 2>/dev/null |
+  ffmpeg -i "$file" -map 0:v -map '0:a?' $vc $ac "${output}" -progress pipe:1 2>"$error_log" |
     awk -F= -v dur="$duration" '/^out_time_ms=/{printf "%d\n", ($2/1000000)/dur*100; fflush()}' |
     zenity --progress --time-remaining \
       --title="Transcoding ($mode) [${idx}/${total}]" \
       --text="$file\n" \
-      --percentage=0 --auto-close --auto-kill &
-  wait
+      --percentage=0 --auto-close --auto-kill
+
+  status=${PIPESTATUS[0]}
+
+  if ((status != 0)); then
+    rm -f "$output"
+
+    error=$(cat "$error_log")
+    rm -f "$error_log"
+
+    zenity --error \
+      --title="FFmpeg failed" \
+      --width=700 \
+      --text="Failed to transcode:\n$file\n\n$error"
+
+    return "$status"
+  fi
+
+  rm -f "$error_log"
 }
 
 idx=0
@@ -69,7 +89,7 @@ for file in "${files[@]}"; do
     run_ffmpeg
     ;;
   mp4hevc)
-    [[ "$vcodec" == "hvc" && "$pixfmt" == "yuv420p" ]] && vc="-c:v copy" || vc="-c:v $(get_hw_encoder hevc) -pix_fmt yuv420p"
+    [[ "$vcodec" == "hevc" && "$pixfmt" == "yuv420p" ]] && vc="-c:v copy" || vc="-c:v $(get_hw_encoder hevc) -pix_fmt yuv420p"
     [[ "$acodec" == "aac" ]] && ac="-c:a copy" || ac="-c:a aac"
     run_ffmpeg
     ;;
