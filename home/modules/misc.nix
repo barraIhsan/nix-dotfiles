@@ -8,7 +8,6 @@
     nicotine-plus
     obsidian
     prismlauncher
-    eden
     texliveSmall
     typst
     osu-lazer-bin
