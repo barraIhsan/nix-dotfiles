@@ -46,11 +46,6 @@ in
     variant = "";
   };
 
-  # ld
-  programs.nix-ld = {
-    enable = true;
-  };
-
   # use fcitx5 for IME and install mozc (jp)
   i18n.inputMethod = {
     enable = true;

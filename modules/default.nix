@@ -11,5 +11,6 @@
     ./desktop.nix
     ./graphics.nix
     ./gaming.nix
+    ./ld.nix
   ];
 }
