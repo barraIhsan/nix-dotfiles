@@ -10,8 +10,14 @@
   };
 
   # my own config
-  xdg.configFile."mpv" = {
-    source = ../config/mpv;
+  xdg.configFile."mpv/mpv.conf".source = ../config/mpv/mpv.conf;
+  xdg.configFile."mpv/input.conf".source = ../config/mpv/input.conf;
+  xdg.configFile."mpv/scripts" = {
+    source = ../config/mpv/scripts;
+    recursive = true;
+  };
+  xdg.configFile."mpv/script-opts" = {
+    source = ../config/mpv/script-opts;
     recursive = true;
   };
 
@@ -30,7 +36,13 @@
 
   # other scripts
   # videoclip
-  xdg.configFile."mpv/scripts/videoclip".source = inputs.videoclip;
+  xdg.configFile."mpv/scripts/videoclip".source =
+    pkgs.runCommand "videoclip" { nativeBuildInputs = [ pkgs.patch ]; }
+      ''
+        cp -r ${inputs.videoclip}/. "$out"
+        chmod -R u+w "$out"
+        patch -p1 -d "$out" < ${../config/mpv/patches/videoclip.diff}
+      '';
   # hold space to set 2x speed
   xdg.configFile."mpv/scripts/hold-speed.lua".source = "${inputs.hold-speed}/hold_speed.lua";
   # seek to

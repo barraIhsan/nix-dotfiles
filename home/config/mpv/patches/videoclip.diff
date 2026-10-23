@@ -1,0 +1,19 @@
+--- a/videoclip/videoclip.lua
++++ b/videoclip/videoclip.lua
+@@ -536,7 +536,6 @@
+         encoder.init(config, main_menu.timings)
+         pcall_tests()
+         mp.add_key_binding('c', 'videoclip-menu-open', main_menu.open)
+-        mp.msg.warn("Press 'c' to open the videoclip menu.")
+     end
+ end)()
+
+--- a/videoclip/config/config.lua
++++ b/videoclip/config/config.lua
+@@ -73,7 +73,6 @@
+     --- Reads the config file and returns a new copy of the config dict.
+     local config = defaults.get_default()
+     mpopt.read_options(config, NAME)
+-    msg.info("Read config file: " .. NAME .. ".conf")
+     return config
+ end
