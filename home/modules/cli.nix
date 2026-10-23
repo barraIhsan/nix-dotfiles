@@ -18,6 +18,7 @@
     dialog
     libnotify
     whisperx
+    unrar
   ];
 
   # zsh

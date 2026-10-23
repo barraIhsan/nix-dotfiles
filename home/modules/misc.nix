@@ -24,6 +24,12 @@
     localsend
     inputs.winapps.packages.${pkgs.system}.winapps
     freerdp
+    audacity
+    aegisub
+    gimp
+    syncplay
+    olympus
+    xidel
   ];
 
   # syncthing
