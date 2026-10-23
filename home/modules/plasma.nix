@@ -112,6 +112,7 @@
                   "org.kde.plasma.weather"
                   "plasmashell_microphone"
                   "discord_status_icon_1"
+                  "Easy Effects"
                 ];
                 # currently doesn't work
                 # see https://github.com/nix-community/plasma-manager/issues/565#issuecomment-3837849097
