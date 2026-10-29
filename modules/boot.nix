@@ -16,6 +16,9 @@
   # use latest kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  # clean /tmp
+  boot.tmp.cleanOnBoot = true;
+
   # modprobe
   boot.extraModprobeConfig = ''
     # disable desaturate color on power saving
