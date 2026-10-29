@@ -19,6 +19,7 @@
     libnotify
     whisperx
     unrar
+    wl-clipboard
   ];
 
   # zsh
