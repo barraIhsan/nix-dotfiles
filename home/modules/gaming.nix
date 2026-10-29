@@ -11,6 +11,7 @@
 
     # emulators
     eden # switch
+    ryubing # switch
     rpcs3 # ps3
     vita3k # psvita
     ppsspp # psp
