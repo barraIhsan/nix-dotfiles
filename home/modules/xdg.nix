@@ -55,6 +55,13 @@
         "image/jpeg" = "org.kde.gwenview.desktop";
         "image/webp" = "org.kde.gwenview.desktop";
         "image/avif" = "org.kde.gwenview.desktop";
+
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document" =
+          "onlyoffice-desktopeditors.desktop";
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" =
+          "onlyoffice-desktopeditors.desktop";
+        "application/vnd.openxmlformats-officedocument.presentationml.presentation" =
+          "onlyoffice-desktopeditors.desktop";
       };
     };
 
