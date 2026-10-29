@@ -20,6 +20,7 @@
     whisperx
     unrar
     wl-clipboard
+    xdelta
   ];
 
   # zsh

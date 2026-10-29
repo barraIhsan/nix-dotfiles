@@ -24,7 +24,7 @@
     localsend
     inputs.winapps.packages.${pkgs.stdenv.hostPlatform.system}.winapps
     freerdp
-    audacity
+    audacity_3
     aegisub
     gimp
     syncplay
