@@ -35,42 +35,57 @@
           stringRules = [
             {
               # why? why not
+              name = "iphone ahhh omw autocomplete";
               find = "omw";
               replace = "On my way!";
             }
           ];
           regexRules = [
             {
+              name = "Accidental \\";
               find = "([^:])\\\\\\s*$";
               replace = "$1";
             }
             {
+              name = "YouTube link shortener #1";
               find = "https?:\\/\\/(?:www\\.)?youtube\\.com\\/(?:watch\\?v=|embed\\/|shorts\\/)([\\w\\-]{11})";
               replace = "https://youtu.be/$1";
             }
             {
+              name = "YouTube link shortener #2";
               find = "https:\\/\\/youtu.be\\/([\\w\\-]{11})&(.+)";
               replace = "https://youtu.be/$1?$2";
             }
+            # embed fixer
             {
-              find = "https?:\\/\\/(?:www\\.)?instagram\\.com\\/(reels?|p|stories)(?!.*\\/audio\\b)(\\/[\\w\\.\\-]{11})[\\/\\w?&=]*";
-              replace = "https://oginstagram.com/$1$2";
+              name = "Instagram embed fixer";
+              find = "https?:\\/\\/(?:www\\.)?((?:g|d|t)\\.)?instagram\\.com\\/((reels?|p)(\\/[\\w\\-]{11}))[\\/\\-\\w?&=\\-]*";
+              replace = "https://$1oginstagram.com/$2";
             }
             {
-              find = "https?:\\/\\/(?:www\\.)?((?:g|d|t)\\.)?(?:twitt(?:e|p)r|(?:fixup)?x)\\.com((\\/\\w+){3})[\\/\\w?&=]*";
-              replace = "https://$1fxtwitter.com$2";
+              name = "Twitter embed fixer";
+              find = "https?:\\/\\/(?:www\\.)?((?:g|d|t)\\.)?(?:twitter|x)\\.com\\/(\\w+\\/status\\/\\d{19})[\\/\\-\\w?&=]*";
+              replace = "https://$1fxtwitter.com/$2";
             }
             {
-              find = "https?:\\/\\/(?:www\\.)?(v(?:t|m)\\.)?tiktok\\.com((\\/[\\w@]+){1,3})[\\/\\-\\w?&=]*";
-              replace = "https://$1tnktok.com$2";
+              name = "TikTok embed fixer";
+              find = "https?:\\/\\/(?:www\\.)?(v(?:t|m)\\.)?tiktok\\.com\\/(@(\\w+\\/){2}\\d+|\\w+)[\\/\\-\\w?&=%.]*";
+              replace = "https://$1tnktok.com/$2";
             }
             {
-              find = "https?:\\/\\/(?:www\\.|old\\.)?reddit\\.com\\/r\\/(\\w+)\\/(comments|s)\\/(\\w+)[\\/\\-\\w?&=]*";
-              replace = "https://vxreddit.com/r/$1/$2/$3";
+              name = "Reddit embed fixer";
+              find = "https?:\\/\\/(?:www\\.|old\\.)?reddit\\.com\\/r\\/(\\w+\\/(comments|s)\\/\\w{7,11})[\\/\\-\\w?&=]*";
+              replace = "https://vxreddit.com/r/$1";
             }
             {
-              find = "https?:\\/\\/(?:www\\.)?anilist\\.co\\/(anime|manga|character)\\/(\\d+)[\\/\\-\\w?&=]*";
-              replace = "https://anilist.co/$1/$2";
+              name = "AniList embed fixer";
+              find = "https?:\\/\\/(?:www\\.)?anilist\\.co\\/((anime|manga|character)\\/(\\d+))[\\/\\-\\w?&=]*";
+              replace = "https://anilist.co/$1";
+            }
+            {
+              name = "Pixiv embed fixer";
+              find = "https?:\\/\\/(?:www\\.)?pixiv\\.net\\/((\\w{2}\\/)?artworks\\/\\d{9}(\\/[\\d\\-]+)?)[\\/\\-\\w?&=]*";
+              replace = "https://phixiv.net/$1";
             }
           ];
         };
