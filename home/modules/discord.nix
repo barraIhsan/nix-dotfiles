@@ -14,7 +14,6 @@
       ];
       vencord.enable = true;
       openASAR.enable = false;
-      krisp.enable = true;
     };
 
     # user plugins
@@ -164,11 +163,6 @@
           enable = true;
           messageContextMenu = true;
         };
-        voiceMessages = {
-          enable = true;
-          echoCancellation = false;
-          noiseSuppression = false;
-        };
         volumeBooster = {
           enable = true;
           multiplier = 3.0;
@@ -187,11 +181,12 @@
         copyFileContents.enable = true;
         crashHandler.enable = true;
         dearrow.enable = true;
+        directFileDownload.enable = true;
         disableCallIdle.enable = true;
         disableDeepLinks.enable = true;
         dontRoundMyTimestamps.enable = true;
         experiments.enable = true;
-        expressionCloner.enable = true;
+        expressionManager.enable = true;
         favoriteEmojiFirst.enable = true;
         fixImagesQuality.enable = true;
         fixSpotifyEmbeds.enable = true;
@@ -201,6 +196,7 @@
         gifProviderSwitcher.enable = true;
         hideMedia.enable = true;
         implicitRelationships.enable = true;
+        jumpToTop.enable = true;
         memberCount.enable = true;
         mentionAvatars.enable = true;
         mutualGroupDms.enable = true;
@@ -241,11 +237,15 @@
         voiceDownload.enable = true;
         youtubeAdblock.enable = true;
       };
-      # disable translate button on chatbar
+      # disable certain ui elements
       uiElements = {
         chatBarButtons.Translate.enable = false;
-        messagePopoverButtons.AddAttachments.enable = false;
-        messagePopoverButtons.ViewRaw.enable = false;
+        messagePopoverButtons = {
+          AddAttachments.enable = false;
+          ViewRaw.enable = false;
+          MessageLogger.enable = false;
+          Translate.enable = false;
+        };
       };
     };
   };
