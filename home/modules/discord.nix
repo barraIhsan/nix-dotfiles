@@ -93,6 +93,10 @@
           enablePluginPresetQuotes = false;
           additionalQuotes = "read if cute|meow :3|sometimes it takes a real man to become the best girl|roxy is proud of you!|nodnod|ganbatte!|separate fiction from reality|so based|hey! dw about it, everything will be alright!! trust|feelin cute|don't take someone's opinion too seriously|hello~ anyone theree??|...|ykwim|hmph|hewwo|she's so cuteeee|keep her till marriage :3|wife material|11/10 girl|she's the one|why are you so cutee baee|im so lucky to have you|cunnyyyy";
         };
+        anonymiseFileNames = {
+          enable = true;
+          anonymiseByDefault = false;
+        };
         imageZoom = {
           enable = true;
           square = true;
@@ -111,13 +115,12 @@
           enable = true;
           messages = 1;
         };
-        noBlockedMessages = {
-          enable = true;
-          ignoreMessages = true;
-        };
         notificationVolume = {
           enable = true;
           notificationVolume = 50.0;
+        };
+        noTrack = {
+          disableAnalytics = false;
         };
         pinDms = {
           enable = true;
@@ -169,7 +172,6 @@
         };
         addAttachments.enable = true;
         alwaysAnimate.enable = true;
-        anonymiseFileNames.enable = true;
         betterGifAltText.enable = true;
         betterRoleContext.enable = true;
         betterSessions.enable = true;
@@ -192,7 +194,6 @@
         fixSpotifyEmbeds.enable = true;
         fixYoutubeEmbeds.enable = true;
         forceOwnerCrown.enable = true;
-        gifPaste.enable = true;
         gifProviderSwitcher.enable = true;
         hideMedia.enable = true;
         implicitRelationships.enable = true;
@@ -223,7 +224,6 @@
         showHiddenThings.enable = true;
         spotifyCrack.enable = true;
         spotifyShareCommands.enable = true;
-        stickerPaste.enable = true;
         themeAttributes.enable = true;
         translate.enable = true;
         typingTweaks.enable = true;
